@@ -32,7 +32,7 @@ def get_features_of_sparse_matrix(sparse_matrix, block_size):
     nnz_per_row_list = np.count_nonzero(sparse_matrix, axis=1)
 
     nnz_blocks_per_row_list = np.count_nonzero(\
-        np.count_nonzero(sparse_matrix.pad((0,0, math.ceil(n_col/block_size)*block_size-n_col))\
+        np.count_nonzero(np.pad(sparse_matrix,(0, math.ceil(n_col/block_size)*block_size-n_col))\
         .reshape(n_row, -1, block_size), axis = 2),\
         axis = 1
     )
