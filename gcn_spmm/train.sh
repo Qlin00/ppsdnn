@@ -1,0 +1,1 @@
+python -u GnnModeling.py > nohup.out 2>&1 &

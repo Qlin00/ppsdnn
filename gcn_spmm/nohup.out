@@ -1,0 +1,37 @@
+Processing Training Set
+1000
+2000
+3000
+4000
+5000
+6000
+7000
+Processing Testing Set
+1000
+2000
+3000
+successful
+Train Dataset Size:  7000
+Test Dataset Size:  3000
+Attribute tensor shape: 3
+Using CUDA
+Traceback (most recent call last):
+  File "GnnModeling.py", line 137, in <module>
+    main()
+  File "GnnModeling.py", line 94, in main
+    model = GNN(ATTR_COUNT, 3,400,0.1).to(device)
+  File "/home/linjunqing/.conda/envs/LPBG/lib/python3.7/site-packages/torch/nn/modules/module.py", line 907, in to
+    return self._apply(convert)
+  File "/home/linjunqing/.conda/envs/LPBG/lib/python3.7/site-packages/torch/nn/modules/module.py", line 578, in _apply
+    module._apply(fn)
+  File "/home/linjunqing/.conda/envs/LPBG/lib/python3.7/site-packages/torch/nn/modules/module.py", line 578, in _apply
+    module._apply(fn)
+  File "/home/linjunqing/.conda/envs/LPBG/lib/python3.7/site-packages/torch/nn/modules/module.py", line 578, in _apply
+    module._apply(fn)
+  File "/home/linjunqing/.conda/envs/LPBG/lib/python3.7/site-packages/torch/nn/modules/module.py", line 601, in _apply
+    param_applied = fn(param)
+  File "/home/linjunqing/.conda/envs/LPBG/lib/python3.7/site-packages/torch/nn/modules/module.py", line 905, in convert
+    return t.to(device, dtype if t.is_floating_point() or t.is_complex() else None, non_blocking)
+RuntimeError: CUDA error: out of memory
+CUDA kernel errors might be asynchronously reported at some other API call,so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1.
